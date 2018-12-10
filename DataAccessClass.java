@@ -33,7 +33,7 @@ public class DataAccessClass {
  }//end DataAccessClass
  
  //-------------------------------------------------------------------------------------------------
- public void writeData( StockItem item) {  
+ public void writeData( Books item) {  
   try  {
    //System.out.println("Before writing rec no: " + stockFile.getFilePointer() ) ;
    stockFile.writeInt(item.getRecordStatus());
@@ -73,7 +73,7 @@ public class DataAccessClass {
  }
  
  //---------------------------------------------------------------------------------------------------
- public void readData( StockItem item) throws IOException, EOFException, Exception { 
+ public void readData( Books item) throws IOException, EOFException, Exception { 
   item.setRecordStatus( stockFile.readInt() );
   
   StringBuffer sb = new StringBuffer();
@@ -99,8 +99,8 @@ public class DataAccessClass {
  }
 
  //------------------------------------------------------------------------------------------------------
- public void readData( int recordToRead, StockItem item) throws IOException, EOFException, Exception { 
-  long recordLocation = StockItem.recordLength * recordToRead ;
+ public void readData( int recordToRead, Books item) throws IOException, EOFException, Exception { 
+  long recordLocation = Books.recordLength * recordToRead ;
   
   stockFile.seek(recordLocation) ;
   
@@ -108,11 +108,11 @@ public class DataAccessClass {
  }
  
 //------------------------------------------------------------------------------------------------------ 
- public void updateRecord( int numberOfRecordToUpdate, StockItem item) throws IOException, EOFException, Exception { 
-  long recordLocation = StockItem.recordLength * numberOfRecordToUpdate ;
+ public void updateRecord( int numberOfRecordToUpdate, Books item) throws IOException, EOFException, Exception { 
+  long recordLocation = Books.recordLength * numberOfRecordToUpdate ;
   
   System.out.println("Record to update: " + numberOfRecordToUpdate + 
-               " StockItem.recordLength " + StockItem.recordLength + 
+               " Books.recordLength " + Books.recordLength + 
                " recordLocation: " + recordLocation) ;
   
   System.out.println("Update info: " + item.toString()) ;

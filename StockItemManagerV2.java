@@ -1,3 +1,9 @@
+/*
+** John Gumm
+** CIS 131
+** Lab 10
+*/
+
 import java.io.IOException;
 import java.io.EOFException;
 
@@ -7,9 +13,9 @@ public class StockItemManagerV2 {
      
   System.out.println("************** Begin Output Phase **************\n" ) ;
   
-  StockItem item = null ;
+  Books item = null ;
   
-  item = new StockItem(StockItem.ACTIVE_RECORD_STATUS , 
+  item = new Books(Books.ACTIVE_RECORD_STATUS , 
        "94680351", 
        "Intro to Java", 
        140.00, 
@@ -17,7 +23,7 @@ public class StockItemManagerV2 {
        50) ;
   dacObject.writeData(item);
   
-  item = new StockItem(StockItem.ACTIVE_RECORD_STATUS , 
+  item = new Books(Books.ACTIVE_RECORD_STATUS , 
        "88800002", 
        "Harry Java", 
        25.00, 
@@ -26,7 +32,7 @@ public class StockItemManagerV2 {
   
   dacObject.writeData(item);
   
-  item = new StockItem(StockItem.ACTIVE_RECORD_STATUS , 
+  item = new Books(Books.ACTIVE_RECORD_STATUS , 
        "00033303", 
        "Java Wars", 
        20.00, 
@@ -35,7 +41,7 @@ public class StockItemManagerV2 {
   
   dacObject.writeData(item);
   
-  item = new StockItem(StockItem.ACTIVE_RECORD_STATUS , 
+  item = new Books(Books.ACTIVE_RECORD_STATUS , 
        "04440404", 
        "Java and Peace", 
        55.00, 
@@ -44,7 +50,7 @@ public class StockItemManagerV2 {
   
   dacObject.writeData(item);
   
-  item = new StockItem(StockItem.ACTIVE_RECORD_STATUS , 
+  item = new Books(Books.ACTIVE_RECORD_STATUS , 
        "00555505", 
        "The Java Games", 
        35.00, 
@@ -53,7 +59,7 @@ public class StockItemManagerV2 {
   
   dacObject.writeData(item);
   
-  item = new StockItem(StockItem.ACTIVE_RECORD_STATUS , 
+  item = new Books(Books.ACTIVE_RECORD_STATUS , 
        "60660006", 
        "Java Love", 
        50.00, 
@@ -66,7 +72,7 @@ public class StockItemManagerV2 {
   
   dacObject.setFilePointerToStart() ;
   
-  StockItem inputItem = new StockItem();
+  Books inputItem = new Books();
   
   try  {
    while ( true)
@@ -92,7 +98,7 @@ public class StockItemManagerV2 {
   // Change title of record 0
   System.out.println("************** Update Record 0 **************\n" ) ;
   
-  item.setRecordStatus(StockItem.ACTIVE_RECORD_STATUS) ; 
+  item.setRecordStatus(Books.ACTIVE_RECORD_STATUS) ; 
   item.setISBN("94680351") ; 
   item.setTitle("Donuts & Java") ; 
   item.setPrice(140.00) ; 
@@ -119,7 +125,7 @@ public class StockItemManagerV2 {
   // Change price of record 1
   System.out.println("************** Update Record 1 **************\n" ) ;
   
-  item.setRecordStatus(StockItem.ACTIVE_RECORD_STATUS) ; 
+  item.setRecordStatus(Books.ACTIVE_RECORD_STATUS) ; 
   item.setISBN("88800002") ; 
   item.setTitle("Harry Java") ; 
   item.setPrice(80.00) ; 

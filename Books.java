@@ -1,4 +1,8 @@
-//package cis131.RandomAccessFileProcessing;
+/*
+** John Gumm
+** CIS 131
+** Lab 10
+*/
 
 public class Books   //books
 {
@@ -28,7 +32,7 @@ public class Books   //books
  
  public int getRecordLength() {  return recordLength ; }
  
- public StockItem () {
+ public Books () {
   setRecordStatus(ACTIVE_RECORD_STATUS) ;
   
   setISBN( "" ) ;
@@ -39,7 +43,7 @@ public class Books   //books
   setRecordLength() ;
  }
  
- public StockItem (int recordStatus, String ISBN, String title, double price, int yearPublished, int quantityOnHand) {
+ public Books (int recordStatus, String ISBN, String title, double price, int yearPublished, int quantityOnHand) {
   setRecordStatus( recordStatus) ;
   setISBN( ISBN ) ;
   setTitle( title ) ;
@@ -49,7 +53,7 @@ public class Books   //books
   setRecordLength() ;
  }
  
- public StockItem (int recordStatus, String ISBN, String title, double price, int yearPublished) {
+ public Books (int recordStatus, String ISBN, String title, double price, int yearPublished) {
   setRecordStatus( recordStatus) ;
   setISBN( ISBN ) ;
   setTitle( title ) ;
