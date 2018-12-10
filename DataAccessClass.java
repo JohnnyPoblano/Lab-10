@@ -1,3 +1,9 @@
+/*
+** John Gumm
+** CIS 131
+** Lab 10
+*/
+
 import java.io.RandomAccessFile;
 import java.io.IOException;
 import java.io.EOFException;
